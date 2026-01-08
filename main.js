@@ -44,7 +44,7 @@ const properties = [
         image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
         featured: true,
         description: "أرض سكنية ممتازة في منطقة الحالية، صالحة للبناء الفوري.",
-        phone: "777789123"
+        phone: "785097990"
     },
     {
         id: 4,
@@ -59,7 +59,7 @@ const properties = [
         image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
         featured: true,
         description: "بيت شعبي تقليدي مع حديقة، في حي القديمة بالقرب من الخدمات.",
-        phone: "777456789"
+        phone: "785097990"
     },
     {
         id: 5,
@@ -74,7 +74,7 @@ const properties = [
         image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
         featured: false,
         description: "شقة دوبلكس مفروشة بالكامل، مطلة على شارع رئيسي.",
-        phone: "777321654"
+        phone: "785097990"
     }
 ];
 
@@ -487,4 +487,5 @@ function showPropertyDetails(id) {
     modalDiv.innerHTML = modalHTML;
     document.body.appendChild(modalDiv);
 }
+
 });
