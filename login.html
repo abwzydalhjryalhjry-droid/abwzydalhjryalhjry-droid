@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - بيتكم</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-home"></i> بيتكم</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="properties.html">العقارات</a></li>
+                <li><a href="add-property.html">أضف عقارك</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="login.html" class="active">تسجيل الدخول</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- رأس الصفحة -->
+    <div class="page-header">
+        <div class="container">
+            <h1>تسجيل الدخول</h1>
+            <p>ادخل إلى حسابك لإدارة عقاراتك ومتابعة طلباتك</p>
+        </div>
+    </div>
+
+    <!-- نموذج تسجيل الدخول -->
+    <div class="content-section">
+        <div class="container">
+            <div class="login-container">
+                <div class="login-form">
+                    <h2>تسجيل الدخول</h2>
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="loginEmail">البريد الإلكتروني أو رقم الهاتف</label>
+                            <input type="text" id="loginEmail" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="loginPassword">كلمة المرور</label>
+                            <div class="password-input">
+                                <input type="password" id="loginPassword" required>
+                                <button type="button" class="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group remember">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">تذكرني</label>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">تسجيل الدخول</button>
+                        
+                        <div class="form-footer">
+                            <p>ليس لديك حساب؟ <a href="register.html">سجل الآن</a></p>
+                            <p><a href="forgot-password.html">نسيت كلمة المرور؟</a></p>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="login-benefits">
+                    <h3>مزايا التسجيل في بيتكم</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> حفظ العقارات المفضلة</li>
+                        <li><i class="fas fa-check-circle"></i> متابعة طلباتك وعقاراتك</li>
+                        <li><i class="fas fa-check-circle"></i> إشعارات فورية بكل جديد</li>
+                        <li><i class="fas fa-check-circle"></i> التواصل المباشر مع الملاك</li>
+                        <li><i class="fas fa-check-circle"></i> تقييمات ومراجعات موثوقة</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>بيتكم</h3>
+                    <p>منصة يمنية لبيع وتأجير العقارات مباشرة بين الملاك والمشتريين بدون عمولات باهظة</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="properties.html">العقارات</a></li>
+                        <li><a href="add-property.html">أضف عقارك</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>اتصل بنا</h3>
+                    <p><i class="fas fa-phone"></i> 785097990</p>
+                    <p><i class="fas fa-envelope"></i> ibrahim780206428@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة &copy; بيتكم 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+</html>

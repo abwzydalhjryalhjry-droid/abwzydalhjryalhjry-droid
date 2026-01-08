@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب - بيتكم</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-home"></i> بيتكم</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="properties.html">العقارات</a></li>
+                <li><a href="add-property.html">أضف عقارك</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="register.html" class="active">إنشاء حساب</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- رأس الصفحة -->
+    <div class="page-header">
+        <div class="container">
+            <h1>إنشاء حساب جديد</h1>
+            <p>انضم إلينا الآن وابدأ رحلة بيع أو شراء عقارك بسهولة</p>
+        </div>
+    </div>
+
+    <!-- نموذج التسجيل -->
+    <div class="content-section">
+        <div class="container">
+            <div class="form-container">
+                <h2>معلومات الحساب</h2>
+                <form id="registerForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">الاسم الكامل *</label>
+                            <input type="text" id="fullName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="userType">نوع المستخدم *</label>
+                            <select id="userType" required>
+                                <option value="">اختر نوع المستخدم</option>
+                                <option value="owner">مالك عقار</option>
+                                <option value="buyer">مشتري/مستأجر</option>
+                                <option value="both">الاثنان معاً</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني *</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف *</label>
+                            <input type="tel" id="phone" required placeholder="0770XXXXXXX">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="password">كلمة المرور *</label>
+                            <div class="password-input">
+                                <input type="password" id="password" required>
+                                <button type="button" class="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <small>يجب أن تحتوي على 8 أحرف على الأقل</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmPassword">تأكيد كلمة المرور *</label>
+                            <div class="password-input">
+                                <input type="password" id="confirmPassword" required>
+                                <button type="button" class="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="city">المدينة *</label>
+                        <select id="city" required>
+                            <option value="">اختر مدينتك</option>
+                            <option value="baghdad">اليمن</option>
+                            <option value="basra">ذمار</option>
+                            <option value="mosul">صنعاء</option>
+                            <option value="erbil">يريم</option>
+                            <option value="sulaymaniyah">اب</option>
+                            <option value="najaf">الحديدة</option>
+                            <option value="karbala">حضرموت</option>
+                            <option value="other">مدينة أخرى</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group terms">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">أوافق على <a href="terms.html">الشروط والأحكام</a> و <a href="privacy.html">سياسة الخصوصية</a></label>
+                    </div>
+                    
+                    <div class="form-group terms">
+                        <input type="checkbox" id="newsletter">
+                        <label for="newsletter">أريد استقبال العروض والأخبار على بريدي الإلكتروني</label>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">إنشاء حساب</button>
+                    
+                    <div class="form-footer">
+                        <p>لديك حساب بالفعل؟ <a href="login.html">سجل الدخول</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>بيتكم</h3>
+                    <p>منصة يمنية لبيع وتأجير العقارات مباشرة بين الملاك والمشتريين بدون عمولات باهظة</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="properties.html">العقارات</a></li>
+                        <li><a href="add-property.html">أضف عقارك</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>اتصل بنا</h3>
+                    <p><i class="fas fa-phone"></i> 785097990</p>
+                    <p><i class="fas fa-envelope"></i> ibrahim780206428@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة &copy; بيتكم 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+</html>

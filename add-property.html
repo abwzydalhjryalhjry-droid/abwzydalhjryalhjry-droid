@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أضف عقارك - بيتكم</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-home"></i> بيتكم</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="properties.html">العقارات</a></li>
+                <li><a href="add-property.html" class="active">أضف عقارك</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="login.html" class="btn-login">تسجيل الدخول</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- رأس الصفحة -->
+    <div class="page-header">
+        <div class="container">
+            <h1>أضف عقارك للبيع أو التأجير</h1>
+            <p>بيع أو أجر عقارك بسرعة وسهولة مع عمولة 2% فقط</p>
+        </div>
+    </div>
+
+    <!-- نموذج إضافة عقار -->
+    <div class="content-section">
+        <div class="container">
+            <div class="form-container">
+                <h2>معلومات العقار</h2>
+                <form id="addPropertyForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="title">عنوان العقار *</label>
+                            <input type="text" id="title" required placeholder="مثال: فيلا فاخرة في ذمار">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="operation">نوع العملية *</label>
+                            <select id="operation" required>
+                                <option value="">اختر نوع العملية</option>
+                                <option value="بيع">بيع</option>
+                                <option value="تأجير">تأجير</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="propertyType">نوع العقار *</label>
+                            <select id="propertyType" required>
+                                <option value="">اختر نوع العقار</option>
+                                <option value="بيت">بيت</option>
+                                <option value="شقة">شقة</option>
+                                <option value="فيلا">فيلا</option>
+                                <option value="أرض">أرض</option>
+                                <option value="محل">محل تجاري</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="price">السعر *</label>
+                            <input type="text" id="price" required placeholder="مثال: 250,000,000 ريال">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="location">المدينة والمنطقة *</label>
+                            <input type="text" id="location" required placeholder="مثال: اليمن - ذمار">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="area">المساحة (م²) *</label>
+                            <input type="text" id="area" required placeholder="مثال: 300">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="rooms">عدد الغرف *</label>
+                            <select id="rooms" required>
+                                <option value="">اختر عدد الغرف</option>
+                                <option value="1">1 غرفة</option>
+                                <option value="2">2 غرف</option>
+                                <option value="3">3 غرف</option>
+                                <option value="4">4 غرف</option>
+                                <option value="5+">5 غرف وأكثر</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="bathrooms">عدد الحمامات *</label>
+                            <select id="bathrooms" required>
+                                <option value="">اختر عدد الحمامات</option>
+                                <option value="1">1 حمام</option>
+                                <option value="2">2 حمام</option>
+                                <option value="3">3 حمامات</option>
+                                <option value="4+">4 حمامات وأكثر</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">وصف مفصل للعقار *</label>
+                        <textarea id="description" required placeholder="صف العقار بالتفصيل..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>إضافة صور (يمكن رفع حتى 10 صور)</label>
+                        <div class="upload-area" id="uploadArea">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>اسحب وأفلت الصور هنا أو انقر لاختيار الملفات</p>
+                            <input type="file" id="imageUpload" accept="image/*" multiple style="display: none;">
+                        </div>
+                        <div id="imagePreview"></div>
+                    </div>
+                    
+                    <h3>معلومات المالك</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ownerName">اسم المالك *</label>
+                            <input type="text" id="ownerName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="ownerPhone">رقم الهاتف *</label>
+                            <input type="tel" id="ownerPhone" required placeholder="785097990">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ownerEmail">البريد الإلكتروني</label>
+                        <input type="email" id="ownerEmail" placeholder="ibrahim780206428@gmail.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactTime">وقت التواصل المفضل</label>
+                        <select id="contactTime">
+                            <option value="">أي وقت</option>
+                            <option value="صباحاً">صباحاً (9 ص - 12 م)</option>
+                            <option value="ظهراً">ظهراً (12 - 4 م)</option>
+                            <option value="مساءً">مساءً (4 - 8 م)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group terms">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">أوافق على <a href="terms.html">الشروط والأحكام</a> وعمولة 2% عند اتمام الصفقة</label>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">إضافة العقار</button>
+                </form>
+                
+                <div class="form-info">
+                    <h4><i class="fas fa-info-circle"></i> معلومات مهمة:</h4>
+                    <ul>
+                        <li>سيتم التواصل معك خلال 24 ساعة لتأكيد إضافة العقار</li>
+                        <li>عمولة المنصة 2% فقط من قيمة الصفقة الناجحة</li>
+                        <li>جميع بياناتك محمية ولن تظهر للعلن إلا بموافقتك</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>بيتكم</h3>
+                    <p>منصة يمنية لبيع وتأجير العقارات مباشرة بين الملاك والمشتريين بدون عمولات باهظة</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="properties.html">العقارات</a></li>
+                        <li><a href="add-property.html">أضف عقارك</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>اتصل بنا</h3>
+                    <p><i class="fas fa-phone"></i> 785097990</p>
+                    <p><i class="fas fa-envelope"></i> ibrahim780206428@gmail.com</p>
+                    <p><i class="fas fa-clock"></i> الأحد - الخميس: 9 ص - 5 م</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة &copy; بيتكم 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل العقار - بيتكم</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-home"></i> بيتكم - ذمار</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="properties.html">العقارات</a></li>
+                <li><a href="add-property.html">أضف عقارك</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- محتوى الصفحة -->
+    <div class="container" style="padding: 100px 20px 40px;">
+        <div id="propertyDetails">
+            <!-- ستظهر تفاصيل العقار هنا -->
+            <div style="text-align: center; padding: 50px;">
+                <h2>جاري تحميل تفاصيل العقار...</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>بيتكم - ذمار</h3>
+                    <p>منصة يمنية لبيع وتأجير العقارات مباشرة بين الملاك والمشتريين</p>
+                </div>
+                <div class="footer-section">
+                    <h3>اتصل بنا</h3>
+                    <p><i class="fas fa-phone"></i> 785097990</p>
+                    <p><i class="fas fa-envelope"></i> ibrahim780206428@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- الجافاسكريبت -->
+    <script>
+        // بيانات العقارات
+        const properties = [
+            {
+                id: 1,
+                title: "فيلا فاخرة في حي الجنوبي",
+                location: "ذمار - حي الجنوبي",
+                price: "350,000,000 ريال",
+                type: "بيع",
+                propertyType: "فيلا",
+                rooms: 4,
+                bathrooms: 3,
+                area: "350 م²",
+                image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                phone: "785097990",
+                description: "فيلا فاخرة في أفضل مناطق ذمار، تتكون من 4 غرف نوم و3 حمامات وصالة كبيرة ومطبخ حديث. الفيلا تحتوي على: <br><br>• 4 غرف نوم رئيسية<br>• 3 حمامات حديثة<br>• صالة استقبال كبيرة<br>• مطبخ مجهز بالكامل<br>• حديقة خاصة<br>• موقف سيارات"
+            },
+            {
+                id: 2,
+                title: "شقة راقية للإيجار في شارع صنعاء",
+                location: "ذمار - حي المركزي",
+                price: "150,000 ريال/شهر",
+                type: "تأجير",
+                propertyType: "شقة",
+                rooms: 3,
+                bathrooms: 2,
+                area: "180 م²",
+                image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                phone: "785097990",
+                description: "شقة مفروشة حديثة في حي المنتزه، مجهزة بكافة الخدمات والمرافق. الشقة تحتوي على: <br><br>• 3 غرف نوم<br>• 2 حمامات<br>• صالة معيشة<br>• مطبخ مجهز<br>• شرفة مطلة<br>• تكييف مركزي"
+            },
+            {
+                id: 3,
+                title: "أرض سكنية في حوش الكهرباء",
+                location: "ذمار - الكهرباء",
+                price: "200,000,000 ريال",
+                type: "بيع",
+                propertyType: "أرض",
+                rooms: 0,
+                bathrooms: 0,
+                area: "500 م²",
+                image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                phone: "777789123",
+                description: "أرض سكنية ممتازة في منطقة الحالية، صالحة للبناء الفوري. <br><br>• المساحة: 500 متر مربع<br>• على شارع رئيسي<br>• خدمات كهرباء وماء متوفرة<br>• صالحة للبناء الفوري<br>• سعر قابل للتفاوض"
+            },
+            {
+                id: 4,
+                title: "بيت شعبي للبيع في الميثالي",
+                location: "ذمار - القديمة",
+                price: "180,000,000 ريال",
+                type: "بيع",
+                propertyType: "بيت",
+                rooms: 3,
+                bathrooms: 2,
+                area: "250 م²",
+                image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                phone: "777456789",
+                description: "بيت شعبي تقليدي مع حديقة، في حي القديمة بالقرب من الخدمات. <br><br>• 3 غرف نوم<br>• 2 حمامات<br>• مطبخ<br>• صالة كبيرة<br>• حديقة خلفية<br>• قريب من المدارس والمستشفيات"
+            }
+        ];
+
+        // عندما يتم تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            // الحصول على معرف العقار من الرابط
+            const urlParams = new URLSearchParams(window.location.search);
+            const propertyId = parseInt(urlParams.get('id'));
+            
+            if (!propertyId) {
+                showError("لم يتم تحديد عقار");
+                return;
+            }
+            
+            // البحث عن العقار
+            const property = properties.find(p => p.id === propertyId);
+            
+            if (!property) {
+                showError("العقار غير موجود");
+                return;
+            }
+            
+            // عرض تفاصيل العقار
+            displayPropertyDetails(property);
+        });
+
+        // دالة لعرض تفاصيل العقار
+        function displayPropertyDetails(property) {
+            const container = document.getElementById('propertyDetails');
+            
+            const html = `
+                <div style="display: flex; flex-direction: column; gap: 30px;">
+                    <!-- الصورة -->
+                    <div>
+                        <div style="height: 400px; background-image: url('${property.image}'); background-size: cover; background-position: center; border-radius: 10px;"></div>
+                    </div>
+                    
+                    <!-- المعلومات -->
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 20px;">
+                        <!-- المعلومات الأساسية -->
+                        <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <h1 style="margin-bottom: 20px; color: #2c3e50;">${property.title}</h1>
+                            
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                                <div>
+                                    <div style="color: #e74c3c; font-size: 2rem; font-weight: bold;">${property.price}</div>
+                                    <div style="color: #666; margin-top: 5px;">${property.type}</div>
+                                </div>
+                                <div style="text-align: left;">
+                                    <div style="background: #3498db; color: white; padding: 8px 15px; border-radius: 5px; display: inline-block;">
+                                        ${property.propertyType}
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <i class="fas fa-map-marker-alt" style="color: #3498db;"></i>
+                                <span style="margin-right: 10px; font-size: 1.1rem;">${property.location}</span>
+                            </div>
+                        </div>
+                        
+                        <!-- المواصفات -->
+                        <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <h2 style="margin-bottom: 20px; color: #2c3e50;">المواصفات</h2>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px;">
+                                <div style="text-align: center; padding: 15px; background: #f8f9fa; border-radius: 5px;">
+                                    <i class="fas fa-bed" style="font-size: 1.5rem; color: #3498db; margin-bottom: 10px;"></i>
+                                    <div style="font-weight: bold;">${property.rooms}</div>
+                                    <div>غرف نوم</div>
+                                </div>
+                                <div style="text-align: center; padding: 15px; background: #f8f9fa; border-radius: 5px;">
+                                    <i class="fas fa-bath" style="font-size: 1.5rem; color: #3498db; margin-bottom: 10px;"></i>
+                                    <div style="font-weight: bold;">${property.bathrooms}</div>
+                                    <div>حمامات</div>
+                                </div>
+                                <div style="text-align: center; padding: 15px; background: #f8f9fa; border-radius: 5px;">
+                                    <i class="fas fa-vector-square" style="font-size: 1.5rem; color: #3498db; margin-bottom: 10px;"></i>
+                                    <div style="font-weight: bold;">${property.area}</div>
+                                    <div>المساحة</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- الوصف -->
+                        <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <h2 style="margin-bottom: 20px; color: #2c3e50;">تفاصيل العقار</h2>
+                            <div style="line-height: 1.8; font-size: 1.1rem;">
+                                ${property.description}
+                            </div>
+                        </div>
+                        
+                        <!-- التواصل -->
+                        <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <h2 style="margin-bottom: 20px; color: #2c3e50;">للتواصل مع المالك</h2>
+                            <div style="display: flex; flex-direction: column; gap: 20px;">
+                                <div style="text-align: center;">
+                                    <div style="font-size: 2rem; color: #27ae60; font-weight: bold; margin-bottom: 10px;">
+                                        ${property.phone}
+                                    </div>
+                                    <div style="color: #666;">رقم هاتف المالك</div>
+                                </div>
+                                
+                                <div style="display: flex; gap: 15px; justify-content: center;">
+                                    <button onclick="callOwner('${property.phone}')" style="background: #27ae60; color: white; border: none; padding: 12px 30px; border-radius: 5px; cursor: pointer; font-size: 1rem;">
+                                        <i class="fas fa-phone"></i> الاتصال الآن
+                                    </button>
+                                    <button onclick="copyPhone('${property.phone}')" style="background: #3498db; color: white; border: none; padding: 12px 30px; border-radius: 5px; cursor: pointer; font-size: 1rem;">
+                                        <i class="fas fa-copy"></i> نسخ الرقم
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            container.innerHTML = html;
+            
+            // تغيير عنوان الصفحة
+            document.title = `${property.title} - بيتكم`;
+        }
+
+        // دالة لعرض خطأ
+        function showError(message) {
+            const container = document.getElementById('propertyDetails');
+            container.innerHTML = `
+                <div style="text-align: center; padding: 100px 20px;">
+                    <h2 style="color: #e74c3c;">${message}</h2>
+                    <p style="margin: 20px 0;">العقار الذي تبحث عنه غير موجود أو تم حذفه</p>
+                    <a href="properties.html" style="background: #3498db; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; display: inline-block;">
+                        العودة للعقارات
+                    </a>
+                </div>
+            `;
+        }
+
+        // نسخ رقم الهاتف
+        function copyPhone(phone) {
+            navigator.clipboard.writeText(phone)
+                .then(() => {
+                    alert('✅ تم نسخ الرقم: ' + phone);
+                })
+                .catch(() => {
+                    // طريقة بديلة
+                    const tempInput = document.createElement('input');
+                    tempInput.value = phone;
+                    document.body.appendChild(tempInput);
+                    tempInput.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(tempInput);
+                    alert('✅ تم نسخ الرقم: ' + phone);
+                });
+        }
+
+        // الاتصال بالمالك
+        function callOwner(phone) {
+            if (confirm(`هل تريد الاتصال بالرقم ${phone}؟`)) {
+                window.location.href = `tel:${phone}`;
+            }
+        }
+    </script>
+</body>
+</html>

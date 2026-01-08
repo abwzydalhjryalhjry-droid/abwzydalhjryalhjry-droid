@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العقارات - بيتكم</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-home"></i> بيتكم - ذمار</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="properties.html" class="active">العقارات</a></li>
+                <li><a href="add-property.html">أضف عقارك</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+                <li><a href="login.html" class="btn-login">تسجيل الدخول</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- رأس الصفحة -->
+    <div class="page-header">
+        <div class="container">
+            <h1>العقارات المتاحة في ذمار</h1>
+            <p>ابحث عن البيت المناسب لك من بين عشرات العروض</p>
+        </div>
+    </div>
+
+    <!-- قسم الفلاتر -->
+    <div class="content-section">
+        <div class="container">
+            <div class="filters">
+                <form id="filterForm">
+                    <div class="filter-row">
+                        <select id="filterType">
+                            <option value="">كل الأنواع</option>
+                            <option value="بيع">بيع</option>
+                            <option value="تأجير">تأجير</option>
+                        </select>
+                        
+                        <select id="filterPropertyType">
+                            <option value="">كل العقارات</option>
+                            <option value="بيت">بيت</option>
+                            <option value="شقة">شقة</option>
+                            <option value="فيلا">فيلا</option>
+                            <option value="أرض">أرض</option>
+                        </select>
+                        
+                        <select id="filterRooms">
+                            <option value="">عدد الغرف</option>
+                            <option value="1">1 غرفة</option>
+                            <option value="2">2 غرف</option>
+                            <option value="3">3 غرف</option>
+                            <option value="4">4 غرف وأكثر</option>
+                        </select>
+                        
+                        <input type="text" id="filterLocation" placeholder="ابحث في ذمار...">
+                        
+                        <button type="submit" class="btn-search">
+                            <i class="fas fa-search"></i> بحث
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- قائمة العقارات -->
+            <div class="properties-grid" id="allProperties">
+                <!-- سيتم إضافة العقارات هنا -->
+            </div>
+            
+            <div id="noResults" style="display: none; text-align: center; padding: 50px;">
+                <h3>لا توجد عقارات تطابق بحثك</h3>
+                <p>جرب تعديل خيارات البحث أو <a href="add-property.html">أضف عقارك</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>بيتكم - ذمار</h3>
+                    <p>منصة يمنية لبيع وتأجير العقارات مباشرة بين الملاك والمشتريين</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="properties.html">العقارات</a></li>
+                        <li><a href="add-property.html">أضف عقارك</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>اتصل بنا</h3>
+                    <p><i class="fas fa-phone"></i> 780206428</p>
+                    <p><i class="fas fa-envelope"></i> ibrahim780206428@gmail.com</p>
+                    <p><i class="fas fa-clock"></i> الأحد - الخميس: 8 ص - 4 م</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة &copy; بيتكم - ذمار 2024</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/properties.js"></script>
+</body>
+</html>
