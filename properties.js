@@ -55,7 +55,7 @@ const allProperties = [
         area: "250 م²",
         image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
         description: "بيت شعبي تقليدي مع حديقة، في حي القديمة بالقرب من الخدمات.",
-        phone: "777456789"
+        phone: "780206428"
     },
     {
         id: 5,
@@ -69,7 +69,7 @@ const allProperties = [
         area: "140 م²",
         image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
         description: "شقة دوبلكس مفروشة بالكامل، مطلة على شارع رئيسي.",
-        phone: "777321654"
+        phone: "780206428"
     },
     {
         id: 6,
@@ -83,7 +83,7 @@ const allProperties = [
         area: "60 م²",
         image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
         description: "محل تجاري في موقع ممتاز في السوق القديم، مناسب لأنواع مختلفة من التجارة.",
-        phone: "777987654"
+        phone: "780206428"
     },
     {
         id: 7,
@@ -97,7 +97,7 @@ const allProperties = [
         area: "400 م²",
         image: "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
         description: "فيلا حديثة التصميم مع مسبح وحديقة، في منطقة هادئة.",
-        phone: "777555444"
+        phone: "780206428"
     }
 ];
 
@@ -576,4 +576,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 });
+
 
